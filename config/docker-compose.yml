@@ -16,10 +16,17 @@ services:
   liquibase:
     image: liquibase/liquibase:latest
     volumes:
-      - ../../src/main/resources/db/changelog:/liquibase/changelog
-    command: --driver=org.postgresql.Driver --url="jdbc:postgresql://postgres-db:5432/quotation_freight" --changeLogFile=../../src/main/resources/db/changelog/db.changelog-master.xml --username=local --password=local --logLevel=info update
-    depends_on:
-      - postgres-db
+      - ../src/main/resources/db/changelog:/liquibase/changelog
+    command:
+      - --url=jdbc:postgresql://postgres-db:5432/quotation_freight
+      - --defaultSchemaName=public
+      - --changeLogFile=db.changelog-master.xml
+      - --username=local
+      - --password=local
+      - --driver=org.postgresql.Driver
+      - --search-path=/liquibase/changelog
+      - --logLevel=info
+      - update
 
   zookeeper:
     image: confluentinc/cp-zookeeper:6.2.1

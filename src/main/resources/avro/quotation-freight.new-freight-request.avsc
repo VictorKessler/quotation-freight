@@ -1,0 +1,11 @@
+{
+  "type": "record",
+  "name": "NewFreightRequestAvro",
+  "namespace": "com.victorkessler.quotationfreight.infrastructure.request",
+  "fields": [
+    {"name": "latitude1", "type": "double"},
+    {"name": "longitude1", "type": "double"},
+    {"name": "latitude2", "type": "double"},
+    {"name": "longitude2", "type": "double"}
+  ]
+}

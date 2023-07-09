@@ -1,0 +1,22 @@
+{
+  "type": "record",
+  "name": "FreightAvro",
+  "namespace": "com.victorkessler.quotationfreight.domain.model",
+  "fields": [
+    {
+      "name": "id",
+      "type": {
+        "type": "string",
+        "logicalType": "uuid"
+      }
+    },
+    {
+      "name": "distanceInMeters",
+      "type": "int"
+    },
+    {
+      "name": "priceInCents",
+      "type": "int"
+    }
+  ]
+}

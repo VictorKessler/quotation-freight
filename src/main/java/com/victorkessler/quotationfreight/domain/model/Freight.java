@@ -1,8 +1,8 @@
 package com.victorkessler.quotationfreight.domain.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.*;
-import org.apache.kafka.common.protocol.types.Field;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.PrePersist;
 
 import java.util.UUID;
 

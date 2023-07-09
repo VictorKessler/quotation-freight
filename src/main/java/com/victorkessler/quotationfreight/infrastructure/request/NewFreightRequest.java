@@ -1,8 +1,7 @@
 package com.victorkessler.quotationfreight.infrastructure.request;
 
 public record NewFreightRequest(
-        Double latitude1,
-        Double longitude1,
-        Double latitude2,
-        Double longitude2
-) {}
+        double latitude1,
+        double longitude1,
+        double latitude2,
+        double longitude2){}
